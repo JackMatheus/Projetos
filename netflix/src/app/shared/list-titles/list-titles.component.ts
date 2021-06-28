@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTitlesComponent implements OnInit {
 
+
+  @Input()
+  title!: string;
   constructor() { }
 
   ngOnInit(): void {
