@@ -1,16 +1,23 @@
 <!-- Injetando o meu componente apontado pelo arquivo nav-bar.component. selector: 'app-nav-bar', -->
 <!-- E necessario declara o componente no modulo tbem, senão gera erro no javascript -->
-<app-nav-bar></app-nav-bar>
-
+<!-- 3-Defininto o envento dento do Pai (menuToggle)="setMenuState($Event)" -->
+<app-nav-bar [opened]="menuOpened" (menuToggle)="setMenuState($Event)"></app-nav-bar>
+<!-- 4.3 (click)="closeMenu" -- [opened]="menuOpened" -->
   <div class="content-fluid">
 
     <app-full-banner></app-full-banner>
-
-    <app-list-titles title="Adicionado recentemente"></app-list-titles>
-    <app-list-titles title="Em alta"></app-list-titles>
-    <app-list-titles title="Continuar assistindo como DJALMA SINDEAUX"></app-list-titles>
+    <!-- gerando erro aqui -->
+    <app-list-titles title="Adicionado recentemente" [list]="listTitles"></app-list-titles>
+    <app-list-titles title="Em alta" [list]="listTitles"></app-list-titles>
+    <app-list-titles title="Continuar assistindo como DJALMA SINDEAUX" [list]="listTitles"></app-list-titles>
     
   </div>
 
   <app-footer></app-footer>
+  <!-- add  class="backdrop" e sua condiçao de funcionamento -->
+  <div class="backdrop" (click)="closeMenu()" *ngIf="menuOpened"></div>
+  <!-- 4.0 (click)="closeMenu" -->
+
+
+  
 
