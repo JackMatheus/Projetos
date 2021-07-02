@@ -10,7 +10,8 @@ export class TitleComponent implements OnInit {
   // >>reenderizar a variável title para o template
   @Input() title: any;
   // 5v.2 - https://www.youtube.com/watch?v=hkIP4mElQic  t.19
-  @ViewChild('trailer', { static: true }) trailer!: ElementRef<HTMLVideoElement>;
+  // 5v.2 - https://www.youtube.com/watch?v=hkIP4mElQic  t.19
+  @ViewChild('trailer', { static: true })trailer!: ElementRef<HTMLVideoElement>;
 
   constructor() { }
   

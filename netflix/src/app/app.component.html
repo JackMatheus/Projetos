@@ -1,7 +1,7 @@
 <!-- Injetando o meu componente apontado pelo arquivo nav-bar.component. selector: 'app-nav-bar', -->
 <!-- E necessario declara o componente no modulo tbem, senão gera erro no javascript -->
 <!-- 3-Defininto o envento dento do Pai (menuToggle)="setMenuState($Event)" -->
-<app-nav-bar [opened]="menuOpened" (menuToggle)="setMenuState($Event)"></app-nav-bar>
+<app-nav-bar [opened]="menuOpened" (menuToggle)="setMenuState()"></app-nav-bar>
 <!-- 4.3 (click)="closeMenu" -- [opened]="menuOpened" -->
   <div class="content-fluid">
 

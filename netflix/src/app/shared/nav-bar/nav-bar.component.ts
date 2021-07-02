@@ -17,7 +17,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 
 export class NavBarComponent implements OnInit{
-    //Info do menu para o PAI
+    //Info do menu para o PAI >> do   NavBarComponent para app.component.ts
     //3-EventEmitter(boolean) é a tipagem, necessario do retorno da resposta
     @Output() menuToggle: EventEmitter<boolean> = new EventEmitter();
     
